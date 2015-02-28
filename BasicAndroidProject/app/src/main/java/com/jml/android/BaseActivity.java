@@ -39,10 +39,7 @@ public abstract class BaseActivity extends ActionBarActivity {
         }
     }
 
-    protected void setUpEnabled() {
-        if (getSupportActionBar() != null)
-            getSupportActionBar().setDisplayHomeAsUpEnabled(Boolean.TRUE);
-    }
+
 
     protected abstract int getLayoutResource();
 
@@ -85,7 +82,7 @@ public abstract class BaseActivity extends ActionBarActivity {
             return;
         }
 
-        if(getSupportFragmentManager().getBackStackEntryCount() == 1){
+        if(getSupportFragmentManager().getBackStackEntryCount() == 0){
             getSupportActionBar().setDisplayHomeAsUpEnabled(Boolean.FALSE);
         }
 
